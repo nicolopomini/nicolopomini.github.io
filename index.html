@@ -1,0 +1,67 @@
+
+<html>
+  <head>
+    <title>Nicol&ograve; Pomini</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Open Sans", sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="./styling/css.css" />
+    <link rel="shortcut icon" type="image/png" href="assets/me.jpg" />
+  </head>
+  <body>
+    <!-- <div id="particles-js"></div> -->
+    <div id="main-container">
+      <h1>Hello | Ciao</h1>
+      <h2>
+        My name is Nicol&ograve; Pomini.
+      </h2>
+      <img id="image" src="assets/me.jpg" />
+      <ul id="social-media-icons">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/nicolopomini"
+            target="_blank"
+            ><img class="icon" src="assets/linkedin-logo.svg"
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/nicolopomini" target="_blank"
+            ><img class="icon" src="assets/twitter-logo.svg"
+          /></a>
+        </li>
+        <li>
+          <a href="https://github.com/nicolopomini" target="_blank"
+            ><img class="icon" src="assets/github-logo.svg"
+          /></a>
+        </li>
+      </ul>
+      <div id="description">
+        <p>
+          I'm a <span id="age"></span>-year-old Italian software engineer.
+        </p>
+        <p>I currently work at WhatsApp, where I fight against impersonators on the business app.</p>
+        <p>
+          I used to work at Google Paris, in YouTube, on internal tools for machine learning infrastructure.
+        </p>
+      </div>
+    </div>
+    <script>
+      window.onload = () => {
+        const birthYear = 1996;
+        const currentYear = new Date().getFullYear();
+        const age =
+          new Date() > new Date(`8/23/${currentYear}`)
+            ? currentYear - birthYear
+            : currentYear - birthYear - 1;
+        document.getElementById("age").innerText = `${age}`;
+      };
+    </script>
+  </body>
+</html>
